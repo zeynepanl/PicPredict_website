@@ -1,0 +1,452 @@
+/* Genel stil ayarları */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inika', serif;
+    background-color: #f2f2f2;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+main {
+    flex: 1;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container ayarları */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Header stil ayarları */
+header {
+    background-color: #d6dfe1;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 7px;
+}
+
+.logo-text {
+    font-size: 38px;
+    font-weight: 400;
+}
+
+nav {
+    margin-left: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 40px;
+}
+
+.nav-item {
+    font-size: 27px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+    background-color: #ccd6e3;
+}
+
+.btn {
+    font-size: 27px;
+    font-weight: 400;
+    background-color: #7580a4;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #5a637e;
+}
+
+/* Upload ve Prediction bölümü stilleri */
+.upload-container {
+    text-align: center;
+}
+
+.upload-container h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row; /* Flex yönü yatay olacak şekilde ayarlandı */
+    align-items: flex-start; /* Öğeleri üst hizalayacak */
+    width: 100%;
+    justify-content: space-between; /* Öğeler arasına boşluk ekler */
+}
+
+.upload-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px; /* Altına biraz boşluk ekleyelim */
+    flex: 1; /* Yatayda yer kaplamasını sağla */
+}
+
+.upload-area {
+    width: 300px; /* Beyaz alanın genişliğini biraz küçülttük */
+    height: 300px; /* Beyaz alanın yüksekliğini biraz küçülttük */
+    border: 2px dashed #000;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #fff;
+    position: relative;
+}
+
+.upload-icon {
+    font-size: 50px;
+    color: #000;
+}
+
+.upload-area p {
+    position: absolute;
+    bottom: 20px;
+    font-size: 16px;
+    color: #000;
+}
+
+.btn-upload {
+    font-size: 35px;
+    background-color: #7580a4;
+    color: white;
+    padding: 2px 50px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    padding-right: 37px;
+}
+
+.btn-upload:hover {
+    background-color: #5a637e;
+}
+
+.results-container {
+    text-align: left;
+    flex: 1; /* Yatayda yer kaplamasını sağla */
+    margin-left: 50px; /* Yükleme alanı ile sonuç alanı arasında boşluk */
+}
+
+.results-container h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.result-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.result-item p {
+    margin: 0;
+    font-size: 30px;
+}
+
+.result {
+    font-weight: bold;
+    display: inline-block;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-left: 10px;
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Footer stil ayarları */
+footer {
+    background-color: #d6dfe1;
+    padding: 20px 0;
+    text-align: center;
+    height: auto;
+    margin-top: auto;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.footer-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.footer-logo-text {
+    font-size: 27px;
+    font-weight: 400;
+}
+
+.footer-info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.contact-follow {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+}
+
+.footer-info p {
+    margin: 5px 0;
+}
+
+.social-media {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    padding-left: 0;
+}
+
+.social-media a {
+    margin: 0 10px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    width: 100%;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-bottom p {
+    margin-top: 10px;
+    color: #333;
+    font-size: 18px;
+}
+
+/* Responsive tasarım için medya sorguları */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .upload-area {
+        width: 250px; /* Yükleme alanını küçült */
+        height: 250px; /* Yükleme alanını küçült */
+    }
+
+    .upload-container h1 {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .content-wrapper {
+        flex-direction: column; /* Yığma düzen */
+        align-items: center; /* Ortalar */
+    }
+
+    .results-container {
+        width: 100%;
+        text-align: center;
+        margin-left: 0; /* Boşluk kaldırıldı */
+        margin-top: 20px; /* Üstüne boşluk ekleyin */
+    }
+
+    .result-item p,
+    .result {
+        font-size: 20px;
+    }
+
+   
+    nav ul li {
+        margin-left: 20px;
+    }
+
+    .nav-item,
+    .btn {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+    }
+
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .upload-area {
+        width: 200px; /* Yükleme alanını küçült */
+        height: 200px; /* Yükleme alanını küçült */
+    }
+
+    .upload-container h1 {
+        font-size: 25px;
+    }
+
+    .content-wrapper {
+        flex-direction: column; /* Yığma düzen */
+        align-items: center; /* Ortalar */
+    }
+
+    .results-container {
+        width: 100%;
+        text-align: center;
+        margin-left: 0; /* Boşluk kaldırıldı */
+        margin-top: 20px; /* Üstüne boşluk ekleyin */
+    }
+
+    .results-container h2 {
+        font-size: 25px;
+    }
+
+    .result-item p,
+    .result {
+        font-size: 20px;
+    }
+
+    .result {
+        padding: 10px 20px;
+        min-width: 150px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .nav-item,
+    .btn {
+        font-size: 18px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-links a {
+        margin-left: 0;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+
+    .footer-bottom p {
+        margin-bottom: 0; /* Alt kısımda ekstra boşluk kalmamasını sağlayın */
+    }
+}

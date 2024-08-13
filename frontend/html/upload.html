@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PicPredict - Upload</title>
+    <link rel="stylesheet" href="/frontend/css/upload.css">
+    <link rel="icon" href="/frontend/assets/img/logo121.png" type="image/png">
+    <script src="/frontend/js/upload.js" defer></script> <!-- JS dosyasını burada ekliyoruz -->
+
+    <style>
+        .upload-area {
+            width: 300px;
+            height: 300px;
+            border: 2px dashed #000;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            background-color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .upload-area img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+        }
+
+        .upload-area input[type="file"] {
+            display: none;
+        }
+
+        .upload-icon {
+            font-size: 50px;
+            color: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .upload-area p {
+            font-size: 16px;
+            color: #000;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img src="/frontend/assets/img/logo121.png" alt="PicPredict Logo">
+                    <span class="logo-text">PicPredict</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="home.html" class="nav-item">Home</a></li>
+                        <li><a href="about.html" class="nav-item">About</a></li>
+                        <li><a href="#" class="nav-item">Sign Up</a></li>
+                        <li><a href="#" class="btn">Sign In</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div class="container upload-container">
+                <div class="content-wrapper">
+                    <div class="upload-box">
+                        <h1>Upload Your Image</h1> 
+                        <div class="upload-area" id="upload-area">
+                            <input type="file" id="file-input" name="file">
+                            <div class="upload-icon" id="upload-icon">
+                                <span>+</span>
+                                <p>Drag and drop your image here or click.</p>
+                            </div>
+                            <img id="uploaded-image" alt="Uploaded Image">
+                        </div>
+                        <form id="upload-form" enctype="multipart/form-data" method="POST">
+                            <button type="button" class="btn-upload" id="upload-button">
+                                <img src="/frontend/assets/icon/play.svg" alt="Upload">
+                            </button>
+                        </form>
+                    </div>
+                    <div class="results-container" id="results-container">
+                        <h2>Prediction Results:</h2>
+                        <div class="result-item">
+                            <p>Category:</p>
+                            <span class="result" id="category">-</span>
+                        </div>
+                        <div class="result-item">
+                            <p>Probability:</p>
+                            <span class="result" id="probability">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div class="container footer-container">
+                <div class="footer-logo">
+                    <img src="/frontend/assets/img/logo121.png" alt="PicPredict Logo">
+                    <span class="footer-logo-text">PicPredict</span>
+                </div>
+                <div class="footer-info">
+                    <div class="contact-follow">
+                        <p>Contact Us</p>
+                        <p>Follow Us</p>
+                        <div class="social-media">
+                            <a href="#"><img src="/frontend/assets/icon/instagram.svg" alt="Instagram"></a>
+                            <a href="#"><img src="/frontend/assets/icon/linkedin.svg" alt="LinkedIn"></a>
+                            <a href="#"><img src="/frontend/assets/icon/x.svg" alt="X"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Do Not Sell My Personal Information</a>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 PicPredict. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
